@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hierarchical Transformations</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<h1>Hierarchical 2D Transformations</h1>
+
+<canvas id="myCanvas" width="700" height="400"></canvas>
+
+<div class="controls">
+    <label>Shoulder
+        <input id="slider1" type="range" min="-100" max="100">
+    </label>
+
+    <label>Elbow
+        <input id="slider2" type="range" min="-100" max="100">
+    </label>
+
+    <label>Wrist
+        <input id="slider3" type="range" min="-100" max="100">
+    </label>
+
+    <label>Branch
+        <input id="slider4" type="range" min="-100" max="100">
+    </label>
+</div>
+
+<script src="lib/gl-matrix-min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,4 +1,3 @@
-# hierarchical-transformations
 # Hierarchical 2D Transformations
 
 An interactive computer graphics demonstration illustrating hierarchical transformations using matrix algebra and the HTML5 Canvas API.

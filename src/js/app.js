@@ -56,11 +56,11 @@ function initialize() {
     /**
      * Creates a transformation matrix relative to a parent transform.
      *
-     * @param {glMatrix.mat3} parentTransform
+     * @param {mat3} parentTransform
      * @param {number[]} translation
      * @param {number} rotation
      * @param {number[]} scale
-     * @returns {glMatrix.mat3}
+     * @returns {mat3}
      */
     function createTransform(
         parentTransform,
@@ -68,14 +68,14 @@ function initialize() {
         rotation,
         scale = [1, 1]
     ) {
-        const local = glMatrix.mat3.create();
+        const local = mat3.create();
 
-        glMatrix.mat3.fromTranslation(local, translation);
-        glMatrix.mat3.rotate(local, local, rotation);
-        glMatrix.mat3.scale(local, local, scale);
+        mat3.fromTranslation(local, translation);
+        mat3.rotate(local, local, rotation);
+        mat3.scale(local, local, scale);
 
-        const world = glMatrix.mat3.create();
-       glMatrix.mat3.multiply(world, parentTransform, local);
+        const world = mat3.create();
+       mat3.multiply(world, parentTransform, local);
 
         return world;
     }
@@ -104,8 +104,8 @@ function initialize() {
         /*
          * Base segment
          */
-        const baseToCanvas = glMatrix.mat3.create();
-        glMatrix.mat3.fromTranslation(baseToCanvas, [50, 150]);
+        const baseToCanvas = mat3.create();
+        mat3.fromTranslation(baseToCanvas, [50, 150]);
 
         drawBranch(baseToCanvas);
 
